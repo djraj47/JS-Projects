@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search App </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>image search engine</h1>
+    <form id="search-form">
+        <input type="text" id="search-box" placeholder="Search anything here ...">
+        <button>Search</button>
+    </form>
+    <div id="search-result"></div>
+    <button id="show-more-btn">Show more</button>
+</body>
+<script>
+    const accessKey = "gnaJ4E6wtHAW_sK3VzYsFnL27-Iu3MANiA2MWWSiuqw";
+    const searchForm = document.getElementById("search-form");
+    const searchBox = document.getElementById("search-box");
+    const searchResult = document.getElementById("search-result");
+    const showMoreBtn = document.getElementById("show-more-btn");
+    let keyword = "";
+    let page = 1;
+    async function searchImage() {
+        keyword = searchBox.value;
+        const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (page == 1) {
+            searchResult.innerHTML = "";
+        }
+        const results = data.results;
+        results.map((result) => {
+            const image = document.createElement("img");
+            image.src = result.urls.small;
+            const imgLink = document.createElement("a");
+            imgLink.href = result.links.html;
+            imgLink.target = "_blank";
+
+            imgLink.appendChild(image);
+            searchResult.appendChild(imgLink);
+        })
+        showMoreBtn.style.display = "block";
+    }
+
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        page = 1;
+        searchImage();
+    });
+
+    showMoreBtn.addEventListener("click", () => {
+        page++;
+        searchImage();
+    })
+</script>
+
+</html>
