@@ -1,0 +1,319 @@
+.headings {
+    text-align: center;
+    margin: 40px;
+}
+
+.headings h3 {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px 10px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.275);
+}
+
+.about {
+    margin: 0 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about .about-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-desc p:first-child {
+    font-size: 2rem;
+}
+
+.about-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-skills i {
+    margin: 10px;
+    font-size: 1rem;
+    color: #28E98C;
+}
+
+
+.about-img img {
+    width: 500px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    width: 30%;
+    margin: 50px auto;
+}
+
+.skills div {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.425);
+}
+
+.download {
+    text-align: center;
+}
+
+.download button {
+    cursor: pointer;
+}
+
+.download button:hover {
+    background-color: #0C0C0C;
+    color: white;
+}
+
+
+
+.download button {
+    display: inline-block;
+    padding: 30px;
+    border: 1px solid gray;
+    color: black;
+    background-color: #28E98C;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.Education {
+    display: flex;
+    max-width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.425);
+}
+
+.Education span {
+    color: #28E98C;
+}
+
+.college-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px;
+}
+
+.college-title p {
+    font-size: 1.5rem;
+}
+
+.Education img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* projects */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+.projects div {
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.567);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects div img {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.projects div button {
+    width: 100px;
+    line-height: 40px;
+    background-color: #28E98C;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+.projects div h5 {
+    font-size: 1.4rem;
+}
+
+.minor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.minor div img {
+    width: 300px;
+
+}
+
+.heading2 {
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.contact {
+    margin: 30px 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.contact-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-1 i {
+    color: #28E98C;
+    margin-right: 10px;
+}
+
+.contact-1 div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 70px;
+    padding: 0 20px;
+    /* border: 1px solid rgba(128, 128, 128, 0.441); */
+    background-color: transparent;
+    border-radius: 5px;
+    background: rgb(91, 91, 91);
+    background: linear-gradient(90deg, rgba(37, 36, 36, 0.77) 0%, rgba(12, 12, 12, 0.753) 100%);
+}
+
+
+.contact-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "yourname your-email"
+        "your-message your-message"
+        "send-message send-message";
+}
+
+.your-message {
+    grid-area: your-message;
+}
+
+.yourname {
+    grid-area: yourname;
+}
+
+.your-email {
+    grid-area: your-email;
+}
+
+.send-message {
+    grid-area: send-message;
+}
+
+.your-email input,
+.send-message input,
+.yourname input,
+.your-message textarea {
+    width: 100%;
+    line-height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    outline: none;
+    background-color: transparent;
+    padding: 0 10px;
+
+}
+
+.your-message textarea {
+    padding: 0 10px;
+
+}
+
+.contact-2 span {
+    position: relative;
+    font-size: small;
+    top: 10px;
+    right: -10px;
+    /* z-index: ; */
+    padding: 10px;
+    background-color: #0C0C0C;
+}
+
+.send-message input:hover {
+    background-color: #28E98C;
+    transition: 1s;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .about-skills {
+        display: flex;
+        flex: 1 0 50%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Education {
+        width: 400px;
+    }
+
+
+    /* projects */
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+}
