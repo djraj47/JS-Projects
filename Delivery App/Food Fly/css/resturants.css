@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&family=Work+Sans:wght@300;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+a {
+    color: black;
+}
+
+nav {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.loggedout {
+    display: none;
+    justify-content: start;
+    gap: 10px;
+}
+
+.loggedout li:nth-child(3) {
+    margin-left: 20px;
+}
+
+.loggedout li img {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+}
+
+select {
+    border: none;
+
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+select::-ms-expand,
+select::-ms-expand {
+    display: none;
+}
+
+nav input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 50px;
+}
+
+span {
+    color: red;
+    font-weight: 700;
+
+}
+
+.location {
+    padding: 8px;
+    border: 1px solid rgba(131, 127, 127, 0.137);
+    border-radius: 5px;
+
+}
+
+.location i {
+    padding: 3px;
+}
+
+
+/* resturant-desc section */
+.resturant-desc {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.resturant-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resturant-title h2 {
+    font-size: 2rem;
+}
+
+.resturant-title h3,
+p,
+span {
+    font-weight: lighter;
+}
+
+.ratings {
+    margin-top: 10px;
+}
+
+.ratings span {
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(70, 168, 70);
+}
+
+.direction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.direction div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid rgba(128, 128, 128, 0.541);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Order section */
+.order {
+    margin: 0px 100px;
+    /* position: relative; */
+    /* Set position to relative for positioning the sticky elements */
+}
+
+.nav .order-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.order-items {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.menu-nav {
+    padding: 10px;
+
+}
+
+.nav .order-items div {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: red;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 3px solid red;
+}
+
+.order-items div:not(.active) {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.492);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.555);
+
+}
+
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.menu-list {
+    padding: 10px 40px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.heading input {
+    padding-left: 5px;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.647);
+}
+
+.heading h3 {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 16, 4, 0.705);
+    color: white;
+    border-radius: 5px;
+}
+
+.items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.item-img img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-ratings {
+    color: rgb(244, 204, 6);
+}
+
+.menu-nav ul li {
+    padding: 20px;
+    background: -webkit-linear-gradient(180deg, rgba(222, 166, 166, 0.307) 0%, rgb(255, 255, 255) 100%);
+    border-right: 2px solid red;
+    color: red;
+    cursor: pointer;
+}
+
+.menu-nav ul li:not(.active-menu) {
+    background: white;
+    border-right: 2px solid rgba(128, 128, 128, 0.425);
+    color: #000;
+}
+
+.reviews {
+    margin: 0px 100px;
+    display: none;
+}
+
+.reviews h3 {
+    font-size: 2rem;
+    margin: 50px 0;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px;
+}
+
+.rating span {
+    width: fit-content;
+    background-color: rgba(255, 0, 0, 0.796);
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+}
+
+.rating span i {
+    font-size: 15px;
+}
+
+.review-box {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.155);
+}
+
+.review-options {
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+}
+
+.large-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.small-box {
+    width: 100%;
+    border-radius: 10px;
+
+
+}
+
+.small-box img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.photos {
+    display: none;
+    margin: 0px 100px;
+}
+
+.photos h3 {
+    font-size: 2rem;
+}
+
+.photos-btn {
+    margin: 30px 0;
+}
+
+.photos button {
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.812);
+    color: white;
+    font-size: 15px;
+}
+
+.item-detail {
+    font-weight: 500;
+}
+
+.active1 {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}
+
+.cart {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px 3px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.cart span {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.itemimg img {
+    border-radius: 10px;
+}
+
+.itemdetail {
+    margin: 10px;
+}
+
+.itemdetail button {
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: rgba(255, 0, 0, 0.632);
+    outline: none;
+    border: none;
+    color: white;
+    float: left;
+}
+
+.itemdetail button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.itemdetail button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.billing{
+    margin-left: 10px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    nav input {
+        width: 200px;
+
+    }
+
+    .order {
+        margin: 0px;
+    }
+
+    .menu {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu-nav ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .menu-nav ul li {
+        padding: 10px;
+        min-width: 120px;
+        text-align: center;
+        background: -webkit-linear-gradient(90deg, rgba(222, 166, 166, 0.307) 0%, rgb(255, 255, 255) 100%);
+        border-bottom: 2px solid red;
+        border-right: none;
+        color: red;
+        cursor: pointer;
+    }
+
+    .menu-nav ul li:not(.active-menu) {
+        border-right: none;
+        background: white;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.425);
+        color: #000;
+    }
+
+
+    .menu-nav {
+        overflow: scroll;
+    }
+
+    .reviews {
+        margin: 5px;
+    }
+
+    .reviews h3 {
+        text-align: center;
+    }
+
+    .heading {
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    .heading input {
+        width: 100%;
+        height: 50px;
+    }
+
+    .photos {
+        margin: 10px;
+    }
+
+    .large-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .photos h3 {
+        text-align: center;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,84 @@
+body {
+    background-color: #ffffffb7;
+}
+
+.items {
+    width: fit-content;
+    padding: 10px 10px;
+    box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.364);
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.itemimg img {
+    border-radius: 10px;
+}
+
+.itemdetail {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addbtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.addbtn button {
+    padding: 5px 10px;
+    background-color: rgba(255, 0, 0, 0.632);
+    outline: none;
+    border: none;
+    color: white;
+    float: left;
+}
+
+.addbtn button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.addbtn button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ordernow {
+    padding: 30px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn {
+    color: white;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.793);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.total {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.total {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.bill-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

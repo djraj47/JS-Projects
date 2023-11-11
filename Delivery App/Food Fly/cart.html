@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-FoodKing</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="https://kit.fontawesome.com/210a6adb7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/home.html"><img src="/images/logo.png" alt="FoodKing" width="120px"></a>
+        </div>
+
+        <div class="nav-items">
+
+
+            <div class="location">
+                <i class="fa-solid fa-location-arrow" style="color: #db0a0a;"></i>
+                <select id="location">
+                    <option value="newyork">New York</option>
+                    <option value="losangeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search food">
+                <button class="search-btn" onclick="searchRestaurants()"> <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cart-billing">
+        <div class="items">
+
+            <div class=" itemimg">
+                <img src="/images/chowmein (1).jpeg" width="160px" alt="">
+            </div>
+            <div class="itemdetail">
+
+                <div class="itemtitle">
+                    <h5>Veg Chowmein</h5>
+                </div>
+                <div class="itemprice">
+                    <p>₹200</p>
+                </div>
+            </div>
+            <div class="addbtn">
+                <div class="btns">
+
+                    <button>-</button>
+                    <button>Add</button>
+                    <button>+</button>
+                </div>
+                <div class="total">
+                    <p>345</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="items">
+
+            <div class=" itemimg">
+                <img src="/images/chowmein (1).jpeg" width="160px" alt="">
+            </div>
+            <div class="itemdetail">
+
+                <div class="itemtitle">
+                    <h5>Veg Chowmein</h5>
+                </div>
+                <div class="itemprice">
+                    <p>₹200</p>
+                </div>
+            </div>
+            <div class="addbtn">
+                <div class="btns">
+
+                    <button>-</button>
+                    <button>Add</button>
+                    <button>+</button>
+                </div>
+                <div class="total">
+                    <p>345</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="items">
+
+            <div class=" itemimg">
+                <img src="/images/chowmein (1).jpeg" width="160px" alt="">
+            </div>
+            <div class="itemdetail">
+
+                <div class="itemtitle">
+                    <h5>Veg Chowmein</h5>
+                </div>
+                <div class="itemprice">
+                    <p>₹200</p>
+                </div>
+            </div>
+            <div class="addbtn">
+                <div class="btns">
+
+                    <button>-</button>
+                    <button>Add</button>
+                    <button>+</button>
+                </div>
+                <div class="total">
+                    <p>345</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="ordernow">
+        <button class="btn">Order Now</button>
+    </div>
+
+
+
+    <section class="total">
+        <div class="bill-items">
+            <div class="itemName">Burger</div>
+            <div class="itemPrice">100</div>
+            <div class="itemQuantity">4</div>
+            <div class="itemTotal">400</div>
+        </div>
+        <div class="bill">
+            <h5>Total amount<span>4000</span></h5>
+            <h5>GST<span></span>35</h5>
+            <h5>Delivery Charges<span>45</span></h5>
+            <h5>Total<span>5000</span></h5>
+        </div>
+        <div class="payment-btn">
+            <button class="btn">Payment Method</button>
+        </div>
+    </section>
+
+</body>
+<script src="/script/cart.js"></script>
+<script src="/script/resturant.js"></script>
+
+</html>

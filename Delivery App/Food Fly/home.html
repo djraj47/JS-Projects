@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodKing</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://kit.fontawesome.com/210a6adb7c.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .splide__arrow--prev {
+        left: 1em;
+        top: 14rem;
+    }
+
+    .splide__arrow--next {
+        right: 1em;
+        top: 14rem;
+    }
+</style>
+
+<body>
+    <!-- navbar seection -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="FoodKing" width="120px">
+        </div>
+
+        <div class="nav-items">
+
+
+            <div class="location">
+                <i class="fa-solid fa-location-arrow" style="color: #db0a0a;"></i>
+                <select id="location">
+                    <option value="newyork">Ghaziabad</option>
+                    <option value="losangeles">Noida</option>
+                    <option value="chicago">NCR</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search for resturant and food">
+                <button class="search-btn" onclick="searchRestaurants()"> <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <ul class="loggedin">
+            <li>
+                <a onclick="showmodal()">Log in</a>
+            </li>
+            <li>
+                <a href="/SignUp.html">Sign Up</a>
+            </li>
+        </ul>
+
+
+        <ul class="loggedout">
+            <li>
+                <img src="images/sticker.png" width="50px" alt="">
+            </li>
+            <li>
+                <p class="name"></p>
+            </li>
+            <li>
+                <a onclick="logout()">log Out </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- login and signup section -->
+
+    <!-- overlay -->
+    <div class="overlay"></div>
+
+    <!-- login -->
+    <div class="loginform">
+        <span onclick="removemodal()"">&times;</span>
+        <form action="" id=" login">
+            <h3>Login</h3>
+            <br>
+            <div>
+                <input value="+91" placeholder=" Phone" type=" text" name="name" id="username" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button class="loginbutton">Login</button>
+            </form>
+            <p id="message"></p>
+    </div>
+
+    <section class="nav2">
+        <div class="nav2-item"><i class="fa-light fa-bars"></i>Filters</div>
+        <div class="nav2-item">Rating: 4.0+</div>
+        <div class="nav2-item">Pure Veg</div>
+        <div class="nav2-item">Snacks</div>
+    </section>
+
+    <section id="thumbnail-carousel" class="splide"
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+        <div class="section-heading">
+            <h3>Inspiration for your first order</h3>
+        </div>
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="images/mc (1).jpeg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (2).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (3).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (4).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (5).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (6).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (7).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (8).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (9).webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="images/isnp (10).webp" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="resturants">
+        <div class="section-heading">
+            <h3>Delivery Restaurants in Ghaziabad</h3>
+        </div>
+        <div class="container container-md">
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (1).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">Cadbury Store</div>
+                    <div class="rating">4.0</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Chocolate, IceCream, </div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+
+
+            <div class="boxes box-md" onclick="openPage('resturants/mcdonald.html')">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">MC Downald's</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Burger, Fries</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+
+
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (3).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (1).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">Cadbury Store</div>
+                    <div class="rating">4.0</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Chocolate, IceCream, </div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">MC Downald's</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Burger, Fries</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (3).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (1).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">Cadbury Store</div>
+                    <div class="rating">4.0</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Chocolate, IceCream, </div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md ">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">MC Downald's</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Burger, Fries</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (3).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (1).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">Cadbury Store</div>
+                    <div class="rating">4.0</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Chocolate, IceCream, </div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">MC Downald's</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Burger, Fries</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (3).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (1).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">Cadbury Store</div>
+                    <div class="rating">4.0</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Chocolate, IceCream, </div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">MC Downald's</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Burger, Fries</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (3).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+            <div class="boxes box-md">
+                <div class="box-img">
+                    <img src="images/resturant (2).webp" alt="La Pino'z Pizza">
+                </div>
+                <div class="box-title">
+                    <div class="title">La Pino'z Pizza</div>
+                    <div class="rating">4.1</div>
+                </div>
+                <div class="box-desc">
+                    <div class="desc">Pizza, Pasta, Italian</div>
+                    <div class="price">200 for one</div>
+                </div>
+                <div class="deleviry-time">21 min</div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="about">
+
+        </div>
+        <div class="contact">
+
+        </div>
+        <div class="address">
+
+        </div>
+    </footer>
+</body>
+<script src="script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#thumbnail-carousel', {
+            fixedWidth: 200,
+            gap: 10,
+            rewind: true,
+            pagination: false,
+        }).mount();
+    });
+
+
+</script>
+
+
+</html>

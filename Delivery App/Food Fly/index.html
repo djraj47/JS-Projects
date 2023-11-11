@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodKing</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="logo">
+                <img src="images/logo.png" alt="FOOD KING" width="200px">
+            </div>
+            <div class="heading">
+                <h1>Multiple Resturants</h1>
+                <h1>Awesome Offers</h1>
+                <h1>Fast Delivery</h1>
+            </div>
+            <div class="description">
+                <h4>Free delivery on all orders above ₹249 and unlock free dishes on all orders above ₹499*</h4>
+            </div>
+            <div class="location">
+                <input type="search" placeholder="Enter Your loaction ">
+                <button id="myButton">Order Now</button>
+            </div>
+        </div>
+
+        <div class="box1">
+            <img src="images/foodbanner1.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        const myButton = document.getElementById("myButton");
+
+        myButton.addEventListener("click", () => {
+            window.location.href = "home.html";
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+

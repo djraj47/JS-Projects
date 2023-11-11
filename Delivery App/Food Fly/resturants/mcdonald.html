@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodKing</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/resturants.css">
+    <script src="https://kit.fontawesome.com/210a6adb7c.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <!-- navbar seection -->
+    <nav>
+        <div class="logo">
+            <a href="/home.html"><img src="/images/logo.png" alt="FoodKing" width="120px"></a>
+        </div>
+
+        <div class="nav-items">
+
+
+            <div class="location">
+                <i class="fa-solid fa-location-arrow" style="color: #db0a0a;"></i>
+                <select id="location">
+                    <option value="newyork">New York</option>
+                    <option value="losangeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search food">
+                <button class="search-btn" onclick="searchRestaurants()"> <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="billing">
+                <a href="/cart.html"><i class="fa-sloid fa-cart-shopping"></i>Cart</a>
+            </div>
+        </div>
+
+        <ul class="loggedout">
+            <li>
+                <img src="images/sticker.png" width="50px" alt="">
+            </li>
+            <li>
+                <p class="name"></p>
+            </li>
+            <li>
+                <a onclick="logout()">log Out </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- resturant description -->
+    <section class="resturant-desc">
+        <div class="resturant-img">
+            <img src="/images/mcdonlad-logo.png" width="400px" alt="">
+        </div>
+        <div class="resturant-title">
+            <h2>Mc Downald's</h2>
+            <h3>Pizza, Burger, Wraps, Fries </h3>
+            <h3>Sector-62, Noida</h3>
+            <p><span>Open now - </span> 12midnight - 3am, 11am - 12midnight </p>
+            <div class="ratings">
+                <span><i class="fa-solid fa-star" style="color: #f5d400;"></i> 4.5</span>
+            </div>
+            <div class="direction">
+                <div>
+                    <img width="30" height="30" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />
+                    <h3>Direction</h3>
+                </div>
+                <div>
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/bookmark-ribbon.png"
+                        alt="bookmark-ribbon" />
+                    <h3>Bookmark</h3>
+                </div>
+                <div>
+                    <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/share.png"
+                        alt="share" />
+                    <h3>Share</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Order section -->
+    <section class="order">
+        <div class="nav">
+            <div class="order-items">
+                <div id="menu" class="active" onclick="bothfunction('menu')">Menu</div>
+                <div id="reviews" onclick="bothfunction('reviews')">Reviews</div>
+                <div id="photos" onclick="bothfunction('photos')">Photos</div>
+            </div>
+
+            <div class="menu">
+                <div class="menu-nav">
+                    <ul>
+                        <li class="active-menu">Veg Pizza</li>
+                        <li>Non Veg Pizzas</li>
+                        <li>Combo</li>
+                        <li>Classic Pizzas</li>
+                        <li>Garlic Breads</li>
+                        <li>Rolls and Wraps </li>
+                        <li>Burger</li>
+                        <li>Chowmein</li>
+                        <li>Desserts</li>
+                        <li>Dips</li>
+                        <li>Drinks (Beverages)</li>
+                        <li>Deal Of The Day</li>
+                    </ul>
+                </div>
+                <div class="menu-list">
+                    <div class="heading">
+                        <h3>Veg Pizza</h3>
+                        <input type="search" name="menu-search" id="menusearch" placeholder="Search with Menu"
+                            onsearch="searcitem()">
+                        <!-- <button class="search-btn" onclick="searcitem()"> <i class="fa-solid fa-magnifying-glass"></i> -->
+
+                    </div>
+
+                    <div class="items">
+
+                        <div class="category" style="display: none;">
+                            Veg Pizza
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/vegpizza (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Veg Chesse Pizza <span>
+
+                                </span>
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹140</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Veg Pizza
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/vegpizza (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Veg Mushroom Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹190</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Veg Pizza
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/vegpizza (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Veg Capsicum Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹220</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Non Veg Pizzas
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/nonvegpizza (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Chicken Lababdar Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹440</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Non Veg Pizzas
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/nonvegpizza (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Mutton Masala Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹740</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Non Veg Pizzas
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/nonvegpizza (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Chicken Tomato Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹400</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Non Veg Pizzas
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/nonvegpizza (4).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Cheesy Chicken Pizza
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹500</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 1 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Classic Pizzas
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/marherita.jpg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Margherita Pizza (personal Giant Slice (22.5 Cm))
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹180</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Combo
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McVegAloo Tikki + Fries + Coke (R)
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+
+                            </div>
+                            <div class="item-price">₹290</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Combo
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (2).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Freis + Coke + McAloo Tikki Burger
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="item-price">₹220</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Combo
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (3).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McSaver McCheese Burger + Coke + Freis.
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹100</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            combo
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (5).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Mcveggie Italian Veg Burger + VegRolls
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹300</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6  -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            combo
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (7).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McAloo Tikki Maharaja + Rolls + Fries (R)
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+
+                            </div>
+                            <div class="item-price">₹490</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Drinks (Beverages)
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (9).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McSaver Mango Shake.
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹100</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Drinks (Beverages)
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/drinks (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Mineral Water
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹40</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Drinks (Beverages)
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/drinks (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Soft Drinks Can
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="item-price">₹100</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Rolls and Wraps
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/mc (10).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McCheese Wrap Veg`
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹190</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">Rolls and Wraps</div>
+                        <div class="item-img">
+                            <img src="/images/mc (11).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Cheesy Italian Chicken Wrap
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹220</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Burger
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/burger (1).png" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McDesi AlooTikki Burger
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹180</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Burger
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/burger (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McAloo Tikki Burger
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+
+                            </div>
+                            <div class="item-price">₹290</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Burger
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/burger (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                McCheese Burger Veg`
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹290</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Burger
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/burger (4).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Italian Veg Burger
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹110</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Hakka Chicken Chowmein
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹350</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Hakka Noodles
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹210</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Veg Chowmein
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹110</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (4).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Singapuri Garlic Chowmein
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹410</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (5).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Desi Garlic Chowmein
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹110</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Chowmein
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/chowmein (6).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Plain Noodles
+                            </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹110</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Dips
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/dips (1).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Cheese Dip </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹30</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Dips
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/dips (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Spicy salsa dip </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹40</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Dips
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/dips (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Cheesey Dip</div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹30</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Dips
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/dips (4).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Extra Sweet Chilli Dip </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹20</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Desserts
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/desserts (2).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Rasberry cake </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹550</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Desserts
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/desserts (3).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Brown Sugar cake </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹300</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="category" style="display: none;">
+                            Desserts
+                        </div>
+                        <div class="item-img">
+                            <img src="/images/desserts (4).jpeg" alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-title">
+                                Red Velvet cake </div>
+                            <div class="item-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="item-price">₹750</div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ipsam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h3>McDonald's Reviews</h3>
+
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/women.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Rachita</h4>
+                            <p>8 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span> 1 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i></span>
+                            <p>not good</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/women.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Shivani</h4>
+                            <p>8 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span> 1 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i></span>
+                            <p>not good</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/man.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Raj</h4>
+                            <p>8 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span> 1 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i></span>
+                            <p>not good</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/women.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Kritika</h4>
+                            <p>8 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span> 1 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i></span>
+                            <p>not good</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/man.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Sunil</h4>
+                            <p>1 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span style="background-color: green;"> 4.1 <i class="fa-solid fa-star"
+                                    style="color: rgb(255, 255, 255);"></i></span>
+                            <p> good</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <img src="/images/women.png" alt="">
+                        <div class="reviewer-details">
+                            <h4>Nidhi</h4>
+                            <p>5 reviews </p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="rating">
+                            <span style="background-color: rgb(65, 180, 65);"> 3.5 <i class="fa-solid fa-star"
+                                    style="color: rgb(255, 255, 255);"></i></span>
+                            <p>good but can be more spicy</p>
+                            <p>0 votes for helpful, 0 Comments</p>
+                            <div class="review-options">
+                                <p><i class="fa fa-light fa-thumbs-up"></i> Helpful</p>
+                                <p><i class="fa fa-light fa-comment"></i> Comment</p>
+                                <p><i class="fa fa-light fa-share"></i> Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photos">
+                <h3>McDonald's Photos</h3>
+
+                <div class="photos-btn">
+                    <button>All(74)</button>
+                    <button>Food(70)</button>
+                </div>
+
+                <div class="large-box">
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                    <div class="small-box"><img src="/images/marherita.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cart" style="display:none;">
+        <span onclick="removeModal()"">&times;</span>
+        <div class=" itemimg">
+            <img src="/images/chowmein (1).jpeg" width="160px" alt="">
+            </div>
+            <div class="itemdetail">
+
+                <div class="itemtitle">
+                    <h5>Veg Chowmein</h5>
+                </div>
+                <div class="itemprice">
+                    <p>₹200</p>
+                </div>
+                <div class="addbtn">
+                    <button onclick="addToCart()">Add</button>
+                </div>
+
+            </div>
+
+    </section>
+
+
+</body>
+<!-- <script src="/script/script.js"></script> -->
+<script src="/script/cart.js"></script>
+<script src="/script/resturant.js"></script>
+
+
+</html>
